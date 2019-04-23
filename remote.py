@@ -170,7 +170,7 @@ def remote_aggregate_output(args):
 if __name__ == '__main__':
 
     parsed_args = json.loads(sys.stdin.read())
-    phase_key = list(list_recursive(parsed_args, 'computation_phase'))
+    phase_key = list(listRecursive(parsed_args, 'computation_phase'))
 
     if not phase_key:
         computation_output = remote_init_env(**parsed_args['input'])

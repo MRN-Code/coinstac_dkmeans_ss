@@ -282,7 +282,7 @@ def local_check_convergence(local_centroids=None, previous_centroids=None, confi
 if __name__ == '__main__':
 
     parsed_args = json.loads(sys.stdin.read())
-    phase_key = list(list_recursive(parsed_args, 'computation_phase'))
+    phase_key = list(listRecursive(parsed_args, 'computation_phase'))
 
     if "remote_init_env" in phase_key:
         computation_output = local_init_env(**parsed_args['input'])
